@@ -1,7 +1,7 @@
 # Cross-Chipset Architectural Vulnerability Analysis
 ## Evidence-Based Assessment of Industry-Wide WiFi Chipset Risk
 
-**Date:** December 27, 2025  
+**Date:** December 26, 2025  
 **Source Artifact:** SoC_RAM.bin (Broadcom BCM4387c2)   
 **MD5:** 28d0f2a6eb5ea75eb290b6ef96144e5b  
 **File Size:** 2,068,480 bytes  
@@ -484,7 +484,7 @@ python3 chipset_vulnerability_analyzer.py SoC_RAM.bin
 
 ---
 
-**Report Date:** December 27, 2025  
+**Report Date:** December 26, 2025  
 **Confidence Level:** HIGH (direct binary evidence)  
 **Cross-Platform Applicability:** CONFIRMED (architectural analysis)  
 **Reproducibility:** FULL (methodology provided)
