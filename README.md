@@ -373,7 +373,7 @@ All findings include:
 
 ## Disclosure
 
-**Date:** December 27, 2025  
+**Date:** December 26, 2025  
 **Researcher:** Joseph Goydish II   
 **Scope:** Industry-wide architectural vulnerability  
 **Vendors Affected:** All major wireless chipset manufacturers  
