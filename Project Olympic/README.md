@@ -213,14 +213,7 @@ Poppy_CLPC_OS autonomous operation is **required for:**
 - Real-time packet processing (multi-gigabit WiFi 6 performance)
 - Battery life optimization (Host CPU sleep while maintaining network)
 - Regulatory compliance (independent CLM enforcement)
-
-### What This Analysis Does NOT Show
-
-✗ Evidence of active exploitation or surveillance  
-✗ Intentional backdoors in Poppy_CLPC_OS  
-✗ Vulnerabilities unique to Broadcom (similar RTOS in all vendors)  
-✗ Methods to bypass IOMMU or compromise firmware  
-✗ Proof-of-concept attacks against this architecture  
+ 
 
 ### What This Analysis DOES Show
 
