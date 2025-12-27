@@ -47,9 +47,8 @@ Modern wireless chipsets implement architectural features that create **visibili
 
 ### Project Olympic (BCM4388 Case Study)
 - **`Project_Olympic/README.md`** - Detailed analysis of BCM4388 specific behaviors
-- **`Project_Olympic/SoC_RAM.bin`** - BCM4388 firmware dump
 - **`Project_Olympic/bluetoothd-hci-2025_01_02-12_47_38.pklg`** - HCI packet capture
-- **`Project_Olympic/bcm4388_auditability_assessment.md`** - Host OS visibility gap analysis
+- **`Project_Olympic/Technical Analysis.md`** - Host OS visibility gap analysis
 
 ---
 
