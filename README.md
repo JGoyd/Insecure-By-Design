@@ -5,10 +5,10 @@
 ## TL;DR / Executive Summary
 
 ### The Discovery
-Forensic analysis of the Broadcom BCM4387c2 firmware identifies six universal architectural features that enable privileged execution, direct memory access, and independent operation outside of Host OS (iOS/Android) control.
+Forensic analysis of the Broadcom BCM4387c2 firmware reveals six universal architectural features that enable privileged execution, direct memory access, and independent operation outside Host OS (iOS/Android) control.
 
 ### The Problem
-This is not a vendor-specific bug, but a systemic architectural reality. Modern WiFi standards (802.11, PCIe) require chipsets to function as independent "computers within computers."
+This is not a vendor-specific bug, but a systemic architectural reality: modern WiFi standards (802.11, PCIe) require chipsets to function as independent "computers within computers."
 
 ### The Impact
 
@@ -16,9 +16,10 @@ This is not a vendor-specific bug, but a systemic architectural reality. Modern 
 - **Persistence:** Operations survive factory resets and host power cycles
 - **Access:** Direct Memory Access (DMA) allows the chip to read/write host RAM, bypassing OS security
 - **Surveillance:** Built-in proximity detection (WiFi RTT/FTM) and hidden protocol extensions (IE 221)
+- **Loss of Control:** All modern smartphones, laptops, and IoT devices contain wireless subsystems that operate outside user or OS visibility, with privileged, persistent, and invisible access to all data. This makes the wireless chipset a universal point of potential **exploitation, surveillance, or abuse—by design** and by international specification.
 
 ### The Evidence
-Verified identification of ThreadX RTOS, 52 DMA channels, and 7 power states that remain active during host sleep. These findings are 100% reproducible using provided scripts and the source `SoC_RAM.bin`.
+ThreadX RTOS, 52 DMA channels, and 7 power states confirmed—chip remains active during host sleep. Findings are 100% reproducible using provided scripts and the source `SoC_RAM.bin`.
 
 ### The Goal
 To move beyond "patching" and mandate industry-wide transparency, regulatory oversight of chipset-level data, and hardware-level user controls.
