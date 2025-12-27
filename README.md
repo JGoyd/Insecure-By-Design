@@ -1,5 +1,29 @@
 # Industry-Wide Wireless Chipset Architecture: Insecure by Design
 
+---
+
+## TL;DR / Executive Summary
+
+### The Discovery
+Forensic analysis of the Broadcom BCM4387c2 firmware identifies six universal architectural features that enable privileged execution, direct memory access, and independent operation outside of Host OS (iOS/Android) control.
+
+### The Problem
+This is not a vendor-specific bug, but a systemic architectural reality. Modern WiFi standards (802.11, PCIe) require chipsets to function as independent "computers within computers."
+
+### The Impact
+
+- **Scale:** 15+ billion devices globally (Broadcom, Qualcomm, Intel, MediaTek, Realtek)
+- **Persistence:** Operations survive factory resets and host power cycles
+- **Access:** Direct Memory Access (DMA) allows the chip to read/write host RAM, bypassing OS security
+- **Surveillance:** Built-in proximity detection (WiFi RTT/FTM) and hidden protocol extensions (IE 221)
+
+### The Evidence
+Verified identification of ThreadX RTOS, 52 DMA channels, and 7 power states that remain active during host sleep. These findings are 100% reproducible using provided scripts and the source `SoC_RAM.bin`.
+
+### The Goal
+To move beyond "patching" and mandate industry-wide transparency, regulatory oversight of chipset-level data, and hardware-level user controls.
+
+---
 ## Overview
 
 Forensic analysis of Broadcom BCM4387c2 firmware reveals architectural patterns that are standard across all major wireless chipset vendors. These design features, required by industry specifications and performance demands, create systemic surveillance capabilities that cannot be disabled by users or patched conventionally.
@@ -8,7 +32,7 @@ Forensic analysis of Broadcom BCM4387c2 firmware reveals architectural patterns 
 
 ---
 
-## The Problem
+## The Risk
 
 Modern WiFi chipsets from all major vendors (Broadcom, Qualcomm, Intel, MediaTek, Realtek) share architectural features that enable:
 
@@ -18,8 +42,6 @@ Modern WiFi chipsets from all major vendors (Broadcom, Qualcomm, Intel, MediaTek
 - Hidden data transmission via protocol extensions
 - Proximity detection via WiFi ranging
 - Persistent storage surviving factory reset
-
-**Estimated impact:** 15+ billion devices worldwide (smartphones, laptops, tablets, IoT devices)
 
 ---
 
